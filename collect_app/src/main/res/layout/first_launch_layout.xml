@@ -24,11 +24,11 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="100dp"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/collect_app_name"
-                android:src="@drawable/odk_logo"
+                android:src="@drawable/fsr_logo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,10 +36,11 @@
                 android:id="@+id/tagline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_marginTop="15dp"
                 android:lines="2"
                 android:text="@string/tagline"
                 android:textAppearance="?textAppearanceHeadline4"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/logo" />
 
@@ -88,25 +89,24 @@
             android:layout_marginBottom="@dimen/margin_extra_extra_small"
             android:textAppearance="?textAppearanceBody1"
             android:textColor="@color/color_on_surface_medium_emphasis"
-            app:layout_constraintBottom_toTopOf="@id/dont_have_server"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/center"
             app:layout_constraintVertical_bias="1"
-            tools:text="ODK Collect v2022.3" />
+            tools:text="FSR Collect v2" />
 
-        <TextView
-            android:id="@+id/dont_have_server"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_standard"
-            android:paddingHorizontal="@dimen/margin_standard"
-            android:textAppearance="?textAppearanceBody2"
-            android:fontFamily="sans-serif-medium"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="Don\'t have a project yet? Try a demo"/>
+<!--        <TextView-->
+<!--            android:id="@+id/dont_have_server"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="@dimen/margin_standard"-->
+<!--            android:paddingHorizontal="@dimen/margin_standard"-->
+<!--            android:textAppearance="?textAppearanceBody2"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:textAlignment="center"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            tools:text="Don\'t have a project yet? Try a demo"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

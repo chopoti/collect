@@ -24,6 +24,7 @@ import org.odk.collect.material.MaterialProgressDialogFragment
 import org.odk.collect.projects.Project
 import org.odk.collect.projects.ProjectsRepository
 import org.odk.collect.settings.SettingsProvider
+import org.odk.collect.strings.R
 import org.odk.collect.strings.localization.LocalizedActivity
 import javax.inject.Inject
 
@@ -94,22 +95,22 @@ class FirstLaunchActivity : LocalizedActivity() {
 
             appName.text = String.format(
                 "%s %s",
-                getString(org.odk.collect.strings.R.string.collect_app_name),
-                versionInformation.versionToDisplay
+                getString(R.string.collect_app_name),
+                "v2"
             )
 
-            dontHaveServer.apply {
-                text = SpannableStringBuilder()
-                    .append(getString(org.odk.collect.strings.R.string.dont_have_project))
-                    .append(" ")
-                    .color(getThemeAttributeValue(context, com.google.android.material.R.attr.colorAccent)) {
-                        append(getString(org.odk.collect.strings.R.string.try_demo))
-                    }
-
-                setOnClickListener {
-                    viewModel.tryDemo()
-                }
-            }
+//            dontHaveServer.apply {
+//                text = SpannableStringBuilder()
+//                    .append(getString(org.odk.collect.strings.R.string.dont_have_project))
+//                    .append(" ")
+//                    .color(getThemeAttributeValue(context, com.google.android.material.R.attr.colorAccent)) {
+//                        append(getString(org.odk.collect.strings.R.string.try_demo))
+//                    }
+//
+//                setOnClickListener {
+//                    viewModel.tryDemo()
+//                }
+//            }
         }
     }
 }
