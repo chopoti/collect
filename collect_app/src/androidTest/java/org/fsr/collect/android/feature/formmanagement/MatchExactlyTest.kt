@@ -67,9 +67,9 @@ class MatchExactlyTest {
 
         notificationDrawerRule
             .open()
-            .assertNotification("ODK Collect", "Form update failed", "Demo project")
+            .assertNotification("FSR Collect", "Form update failed", "Demo project")
             .clickNotification(
-                "ODK Collect",
+                "FSR Collect",
                 "Form update failed",
                 FillBlankFormPage()
             ).pressBack(MainMenuPage())
@@ -89,9 +89,9 @@ class MatchExactlyTest {
 
         notificationDrawerRule
             .open()
-            .assertNotification("ODK Collect", "Form update failed", "Demo project")
+            .assertNotification("FSR Collect", "Form update failed", "Demo project")
             .clickAction(
-                "ODK Collect",
+                "FSR Collect",
                 "Form update failed",
                 "Show details",
                 ErrorPage()
