@@ -35,7 +35,7 @@ android {
             isIncludeAndroidResources = true
         }
     }
-    namespace = "org.odk.collect.permissions"
+    namespace = "org.fsr.collect.permissions"
 }
 
 dependencies {

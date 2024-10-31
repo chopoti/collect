@@ -40,7 +40,7 @@ android {
         viewBinding = true
     }
 
-    namespace = "org.odk.collect.errors"
+    namespace = "org.fsr.collect.errors"
 }
 
 dependencies {

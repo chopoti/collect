@@ -40,7 +40,7 @@ android {
         viewBinding = true
     }
 
-    namespace = "org.odk.collect.lists"
+    namespace = "org.fsr.collect.lists"
 }
 
 dependencies {

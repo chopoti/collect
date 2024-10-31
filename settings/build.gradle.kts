@@ -41,7 +41,7 @@ android {
         }
     }
 
-    namespace = "org.odk.collect.settings"
+    namespace = "org.fsr.collect.settings"
 }
 
 dependencies {

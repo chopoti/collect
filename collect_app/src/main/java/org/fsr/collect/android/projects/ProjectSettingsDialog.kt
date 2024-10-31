@@ -1,0 +1,117 @@
+package org.fsr.collect.android.projects
+
+import android.app.Dialog
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
+import androidx.fragment.app.DialogFragment
+import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.fsr.collect.android.activities.AboutActivity
+import org.fsr.collect.android.activities.ActivityUtils
+import org.fsr.collect.android.databinding.ProjectSettingsDialogLayoutBinding
+import org.fsr.collect.android.injection.DaggerUtils
+import org.fsr.collect.android.mainmenu.CurrentProjectViewModel
+import org.fsr.collect.android.mainmenu.MainMenuActivity
+import org.fsr.collect.android.preferences.screens.ProjectPreferencesActivity
+import org.fsr.collect.androidshared.ui.DialogFragmentUtils
+import org.fsr.collect.androidshared.ui.ToastUtils
+import org.fsr.collect.projects.Project
+import org.fsr.collect.projects.ProjectsRepository
+import org.fsr.collect.settings.SettingsProvider
+import javax.inject.Inject
+
+class ProjectSettingsDialog(private val viewModelFactory: ViewModelProvider.Factory) : DialogFragment() {
+
+    @Inject
+    lateinit var projectsRepository: ProjectsRepository
+
+    @Inject
+    lateinit var settingsProvider: SettingsProvider
+
+    lateinit var binding: ProjectSettingsDialogLayoutBinding
+
+    private lateinit var currentProjectViewModel: CurrentProjectViewModel
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        DaggerUtils.getComponent(context).inject(this)
+
+        currentProjectViewModel = ViewModelProvider(
+            requireActivity(),
+            viewModelFactory
+        )[CurrentProjectViewModel::class.java]
+        currentProjectViewModel.refresh()
+    }
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        binding = ProjectSettingsDialogLayoutBinding.inflate(LayoutInflater.from(context))
+
+        val project = currentProjectViewModel.currentProject.value
+        binding.currentProject.setupView(project, settingsProvider.getUnprotectedSettings())
+        binding.currentProject.contentDescription = getString(org.fsr.collect.strings.R.string.using_project, project.name)
+        inflateListOfInActiveProjects(requireContext(), project)
+
+        binding.closeIcon.setOnClickListener {
+            dismiss()
+        }
+
+        binding.generalSettingsButton.setOnClickListener {
+            startActivity(Intent(requireContext(), ProjectPreferencesActivity::class.java))
+            dismiss()
+        }
+
+        binding.addProjectButton.setOnClickListener {
+            DialogFragmentUtils.showIfNotShowing(
+                QrCodeProjectCreatorDialog::class.java,
+                requireActivity().supportFragmentManager
+            )
+            dismiss()
+        }
+
+        binding.aboutButton.setOnClickListener {
+            startActivity(Intent(requireContext(), AboutActivity::class.java))
+            dismiss()
+        }
+
+        return MaterialAlertDialogBuilder(requireContext())
+            .setView(binding.root)
+            .create()
+    }
+
+    private fun inflateListOfInActiveProjects(context: Context, currentProject: Project.Saved) {
+        if (projectsRepository.getAll().none { it.uuid != currentProject.uuid }) {
+            binding.topDivider.visibility = INVISIBLE
+        } else {
+            binding.topDivider.visibility = VISIBLE
+        }
+
+        projectsRepository.getAll().filter {
+            it.uuid != currentProject.uuid
+        }.forEach { project ->
+            val projectView = ProjectListItemView(context)
+
+            projectView.setOnClickListener {
+                switchProject(project)
+            }
+
+            projectView.setupView(project, settingsProvider.getUnprotectedSettings(project.uuid))
+            projectView.contentDescription = getString(org.fsr.collect.strings.R.string.switch_to_project, project.name)
+            binding.projectList.addView(projectView)
+        }
+    }
+
+    private fun switchProject(project: Project.Saved) {
+        currentProjectViewModel.setCurrentProject(project)
+
+        ActivityUtils.startActivityAndCloseAllOthers(requireActivity(), MainMenuActivity::class.java)
+        ToastUtils.showLongToast(
+            requireContext(),
+            getString(org.fsr.collect.strings.R.string.switched_project, project.name)
+        )
+        dismiss()
+    }
+}

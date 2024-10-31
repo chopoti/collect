@@ -9,7 +9,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.shadows"
+    namespace = "org.fsr.collect.shadows"
     compileSdk = Versions.android_compile_sdk
 
     defaultConfig {

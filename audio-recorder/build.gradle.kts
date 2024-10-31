@@ -34,7 +34,7 @@ android {
     testOptions {
         unitTests.isIncludeAndroidResources = true
     }
-    namespace = "org.odk.collect.audiorecorder"
+    namespace = "org.fsr.collect.audiorecorder"
 }
 
 dependencies {

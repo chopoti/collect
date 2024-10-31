@@ -9,7 +9,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.webpage"
+    namespace = "org.fsr.collect.webpage"
 
     compileSdk = Versions.android_compile_sdk
 

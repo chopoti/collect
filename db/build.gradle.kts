@@ -9,7 +9,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.db"
+    namespace = "org.fsr.collect.db"
 
     compileSdk = Versions.android_compile_sdk
 

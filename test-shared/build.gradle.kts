@@ -29,7 +29,7 @@ android {
             isMinifyEnabled = false
         }
     }
-    namespace = "org.odk.collect.testshared"
+    namespace = "org.fsr.collect.testshared"
 }
 
 dependencies {

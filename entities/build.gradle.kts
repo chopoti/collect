@@ -11,7 +11,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.entities"
+    namespace = "org.fsr.collect.entities"
 
     compileSdk = Versions.android_compile_sdk
 

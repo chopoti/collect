@@ -11,7 +11,7 @@
                     <!-- used to test relative references that parent out of a repeat -->
                     <my-toplevel-value/>
 
-                    <!-- no repeat instance in model so odk-new-repeat event should fire for each new instance -->
+                    <!-- no repeat instance in model so fsr-new-repeat event should fire for each new instance -->
                     <my-repeat jr:template="">
                         <defaults-to-position/>
                         <defaults-to-toplevel/>
@@ -22,7 +22,7 @@
                         <defaults-to-position-again/>
                     </my-jr-count-repeat>
 
-                    <!-- repeat instances in model should not fire odk-new-repeat event -->
+                    <!-- repeat instances in model should not fire fsr-new-repeat event -->
                     <my-repeat-without-template>
                         <my-value/>
                     </my-repeat-without-template>
@@ -63,7 +63,7 @@
             </input>
         </repeat>
 
-        <!-- odk-new-repeat event in repeat with jr:count. Event should be fired for each repeat added as count changes -->
+        <!-- fsr-new-repeat event in repeat with jr:count. Event should be fired for each repeat added as count changes -->
         <input ref="/data/repeat-count">
             <label>Repeat count</label>
         </input>
@@ -74,7 +74,7 @@
             </input>
         </repeat>
 
-        <!-- odk-new-repeat event without template. Event should not be fired for the repeats in the instance -->
+        <!-- fsr-new-repeat event without template. Event should not be fired for the repeats in the instance -->
         <repeat nodeset="/data/my-repeat-without-template">
             <setvalue event="odk-new-repeat" ref="/data/my-repeat-without-template/my-value">2</setvalue>
             <input ref="/data/my-repeat-without-template/my-value">

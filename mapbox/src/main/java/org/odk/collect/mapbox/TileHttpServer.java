@@ -1,6 +1,6 @@
-package org.odk.collect.mapbox;
+package org.fsr.collect.mapbox;
 
-import org.odk.collect.maps.layers.TileSource;
+import org.fsr.collect.maps.layers.TileSource;
 
 import java.io.BufferedReader;
 import java.io.Closeable;

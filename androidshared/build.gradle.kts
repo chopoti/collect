@@ -38,7 +38,7 @@ android {
     testOptions {
         unitTests.isIncludeAndroidResources = true
     }
-    namespace = "org.odk.collect.androidshared"
+    namespace = "org.fsr.collect.androidshared"
 }
 
 dependencies {

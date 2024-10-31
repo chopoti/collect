@@ -29,7 +29,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.fragmentstest"
+    namespace = "org.fsr.collect.fragmentstest"
 }
 
 dependencies {

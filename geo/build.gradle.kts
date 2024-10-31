@@ -40,7 +40,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    namespace = "org.odk.collect.geo"
+    namespace = "org.fsr.collect.geo"
 }
 
 dependencies {

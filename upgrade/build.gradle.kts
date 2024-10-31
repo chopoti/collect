@@ -37,7 +37,7 @@ android {
         }
     }
 
-    namespace = "org.odk.collect.upgrade"
+    namespace = "org.fsr.collect.upgrade"
 }
 
 dependencies {

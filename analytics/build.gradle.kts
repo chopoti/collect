@@ -30,7 +30,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.analytics"
+    namespace = "org.fsr.collect.analytics"
 }
 
 dependencies {

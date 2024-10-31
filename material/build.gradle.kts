@@ -40,7 +40,7 @@ android {
         viewBinding = true
     }
 
-    namespace = "org.odk.collect.material"
+    namespace = "org.fsr.collect.material"
 }
 
 dependencies {

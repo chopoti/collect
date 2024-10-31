@@ -114,7 +114,7 @@ the specific language governing permissions and limitations under the License.
             </intent-filter>
         </activity>
 
-        <activity android:name="org.odk.collect.android.activities.CrashHandlerActivity" />
+        <activity android:name="org.fsr.collect.android.activities.CrashHandlerActivity" />
 
         <activity
             android:name=".activities.ScannerWithFlashlightActivity"
@@ -126,7 +126,7 @@ the specific language governing permissions and limitations under the License.
             android:theme="@style/Theme.Collect.FormEntry"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="org.odk.collect.draw.DrawActivity"
+            android:name="org.fsr.collect.draw.DrawActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".activities.InstanceChooserList" />
         <activity
@@ -146,32 +146,32 @@ the specific language governing permissions and limitations under the License.
         <activity android:name=".formhierarchy.FormHierarchyActivity" />
         <activity android:name=".formhierarchy.ViewOnlyFormHierarchyActivity" />
         <activity
-            android:name="org.odk.collect.geo.geopoint.GeoPointActivity"
+            android:name="org.fsr.collect.geo.geopoint.GeoPointActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme" />
         <activity
-            android:name="org.odk.collect.geo.geopoint.GeoPointMapActivity"
+            android:name="org.fsr.collect.geo.geopoint.GeoPointMapActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme" />
         <activity
-            android:name="org.odk.collect.geo.geopoly.GeoPolyActivity"
+            android:name="org.fsr.collect.geo.geopoly.GeoPolyActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme" />
         <activity
-            android:name="org.odk.collect.errors.ErrorActivity"
+            android:name="org.fsr.collect.errors.ErrorActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme" />
 
         <activity
-            android:name="org.odk.collect.entities.browser.EntityBrowserActivity"
+            android:name="org.fsr.collect.entities.browser.EntityBrowserActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme" />
 
         <activity android:name=".activities.FormMapActivity" />
         <activity android:name=".activities.BearingActivity" />
-        <activity android:name="org.odk.collect.webpage.WebViewActivity" />
+        <activity android:name="org.fsr.collect.webpage.WebViewActivity" />
         <activity
-            android:name="org.odk.collect.selfiecamera.CaptureSelfieActivity"
+            android:name="org.fsr.collect.selfiecamera.CaptureSelfieActivity"
             android:theme="@style/Theme.Collect"
             tools:replace="android:theme">
 
@@ -218,11 +218,11 @@ the specific language governing permissions and limitations under the License.
 
         <provider
             android:name=".external.FormsProvider"
-            android:authorities="org.odk.collect.android.provider.odk.forms"
+            android:authorities="org.fsr.collect.android.provider.odk.forms"
             android:exported="true" />
         <provider
             android:name=".external.InstanceProvider"
-            android:authorities="org.odk.collect.android.provider.odk.instances"
+            android:authorities="org.fsr.collect.android.provider.odk.instances"
             android:exported="true" />
 
         <activity-alias

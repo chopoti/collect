@@ -34,7 +34,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map_container"
-        android:name="org.odk.collect.maps.MapFragment"
+        android:name="org.fsr.collect.maps.MapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/status_section" />

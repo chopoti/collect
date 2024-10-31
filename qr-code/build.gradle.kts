@@ -9,7 +9,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.qrcode"
+    namespace = "org.fsr.collect.qrcode"
 
     compileSdk = Versions.android_compile_sdk
 

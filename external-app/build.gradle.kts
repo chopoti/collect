@@ -35,7 +35,7 @@ android {
             isIncludeAndroidResources = true
         }
     }
-    namespace = "org.odk.collect.externalapp"
+    namespace = "org.fsr.collect.externalapp"
 }
 
 dependencies {

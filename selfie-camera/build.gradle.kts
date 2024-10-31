@@ -10,7 +10,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.selfiecamera"
+    namespace = "org.fsr.collect.selfiecamera"
 
     compileSdk = Versions.android_compile_sdk
 

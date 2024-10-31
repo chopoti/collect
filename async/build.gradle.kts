@@ -31,7 +31,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.async"
+    namespace = "org.fsr.collect.async"
 }
 
 dependencies {

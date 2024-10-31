@@ -31,7 +31,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.mapbox"
+    namespace = "org.fsr.collect.mapbox"
 }
 
 dependencies {

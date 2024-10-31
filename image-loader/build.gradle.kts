@@ -30,7 +30,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.imageloader"
+    namespace = "org.fsr.collect.imageloader"
 }
 
 dependencies {

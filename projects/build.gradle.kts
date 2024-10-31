@@ -41,7 +41,7 @@ android {
         }
     }
 
-    namespace = "org.odk.collect.projects"
+    namespace = "org.fsr.collect.projects"
 }
 
 dependencies {

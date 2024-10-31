@@ -10,7 +10,7 @@ plugins {
 apply(from = "../config/quality.gradle")
 
 android {
-    namespace = "org.odk.collect.draw"
+    namespace = "org.fsr.collect.draw"
     compileSdk = Versions.android_compile_sdk
 
     defaultConfig {

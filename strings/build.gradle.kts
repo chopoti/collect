@@ -29,7 +29,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    namespace = "org.odk.collect.strings"
+    namespace = "org.fsr.collect.strings"
 
     testOptions {
         unitTests {

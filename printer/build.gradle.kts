@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "org.odk.collect.printer"
+    namespace = "org.fsr.collect.printer"
     compileSdk = Versions.android_compile_sdk
 
     defaultConfig {

@@ -29,7 +29,7 @@ android {
             isMinifyEnabled = false
         }
     }
-    namespace = "org.odk.collect.audioclips"
+    namespace = "org.fsr.collect.audioclips"
 }
 
 dependencies {

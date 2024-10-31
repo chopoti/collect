@@ -35,7 +35,7 @@ android {
             isIncludeAndroidResources = true
         }
     }
-    namespace = "org.odk.collect.location"
+    namespace = "org.fsr.collect.location"
 }
 
 dependencies {

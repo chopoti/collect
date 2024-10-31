@@ -42,7 +42,7 @@ android {
         viewBinding = true
     }
 
-    namespace = "org.odk.collect.maps"
+    namespace = "org.fsr.collect.maps"
 }
 
 dependencies {

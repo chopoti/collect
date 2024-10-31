@@ -20,5 +20,5 @@ android {
         }
     }
 
-    namespace = "org.odk.collect.nbistubs"
+    namespace = "org.fsr.collect.nbistubs"
 }
